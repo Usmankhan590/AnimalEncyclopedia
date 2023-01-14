@@ -1,0 +1,244 @@
+﻿
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Animal Encyclopedia</title>
+    <link rel="icon" href="~/Content/images/faviconicon.png" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Content/AdminAssets/css/bootstrap.min.css" />
+    <!-- themefy CSS -->
+    <link rel="stylesheet" href="~/Content/AdminAssets/vendors/themefy_icon/themify-icons.css" />
+    <!-- select2 CSS -->
+    <link rel="stylesheet" href="~/Content/AdminAssets/vendors/niceselect/css/nice-select.css" />
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="~/Content/AdminAssets/vendors/owl_carousel/css/owl.carousel.css" />
+    <!-- gijgo css -->
+    <link rel="stylesheet" href="~/Content/AdminAssets/vendors/gijgo/gijgo.min.css" />
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="~/Content/AdminAssets/vendors/font_awesome/css/all.min.css" />
+    <link rel="stylesheet" href="~/Content/AdminAssets/vendors/tagsinput/tagsinput.css" />
+    <!-- date picker -->
+    <link rel="stylesheet" href="~/Content/AdminAssets/vendors/datepicker/date-picker.css" />
+    <link rel="stylesheet" href="~/Content/AdminAssets/vendors/vectormap-home/vectormap-2.0.2.css" />
+
+    <!-- scrollabe  -->
+    <link rel="stylesheet" href="~/Content/AdminAssets/vendors/scroll/scrollable.css" />
+    <!-- datatable CSS -->
+    <link rel="stylesheet" href="~/Content/AdminAssets/vendors/datatable/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="~/Content/AdminAssets/vendors/datatable/css/responsive.dataTables.min.css" />
+    <link rel="stylesheet" href="~/Content/AdminAssets/vendors/datatable/css/buttons.dataTables.min.css" />
+    <!-- text editor css -->
+    <link rel="stylesheet" href="~/Content/AdminAssets/vendors/text_editor/summernote-bs4.css" />
+    <!-- morris css -->
+    <link rel="stylesheet" href="~/Content/AdminAssets/vendors/morris/morris.css">
+    <!-- metarial icon css -->
+    <link rel="stylesheet" href="~/Content/AdminAssets/vendors/material_icon/material-icons.css" />
+    <!-- menu css  -->
+    <link rel="stylesheet" href="~/Content/AdminAssets/css/metisMenu.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="~/Content/AdminAssets/css/style.css" />
+    <link rel="stylesheet" href="~/Content/AdminAssets/css/colors/default.css" id="colorSkinCSS">
+    <link rel="stylesheet" href="~/Content/AdminAssets/css/profileicon.css" />
+</head>
+<body class="crm_body_bg">
+
+
+    <!-- main content part here -->
+    <!-- sidebar  -->
+    <nav class="sidebar vertical-scroll  ps-container ps-theme-default ps-active-y">
+        <div class="logo d-flex justify-content-between">
+            <a href="@Url.Action("Dashboard","Admin")"><img src="~/Content/images/logo3.png" style="width:150px ; height:90px"></a>
+            <div class="sidebar_close_icon d-lg-none">
+                <i class="ti-close"></i>
+            </div>
+        </div>
+        <ul id="sidebar_menu">
+
+            <li class="">
+                <a class="has-arrow" href="#" aria-expanded="false">
+                    <div class="icon_menu">
+                        <img src="~/Content/AdminAssets/img/menu-icon/2.svg" alt="">
+                    </div>
+
+                    <span>
+                        Home
+
+                    </span>
+                </a>
+                <ul>
+                    <li><a href="@Url.Action("Animals_Details","Admin")">Animals Morphism</a></li>
+                    <li><a href="@Url.Action("Research","Admin")">Research</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a class="has-arrow" href="#" aria-expanded="false">
+                    <div class="icon_menu">
+                        <img src="~/Content/AdminAssets/img/menu-icon/2.svg" alt="">
+                    </div>
+                    <span>Doctors</span>
+                </a>
+                <ul>
+                    <li><a href="@Url.Action("Doctor","Admin")">Doctors Info</a></li>
+                    <li><a href="@Url.Action("Add_Doctors","Admin")">Add Doctors</a></li>
+                </ul>
+            </li>
+
+            <li class="">
+                <a class="has-arrow" href="#" aria-expanded="false">
+                    <div class="icon_menu">
+                        <img src="~/Content/AdminAssets/img/menu-icon/2.svg" alt="">
+                    </div>
+                    <span>Animals</span>
+                </a>
+                <ul>
+                    <li><a href="@Url.Action("Amphibians","Admin")">Amphibians</a></li>
+                    <li><a href="@Url.Action("Birds","Admin")">Birds</a></li>
+                    <li><a href="@Url.Action("WildAnimal","Admin")">Wild Animal</a></li>
+
+                </ul>
+            </li>
+
+
+            <li class="">
+                <a class="has-arrow" href="#" aria-expanded="false">
+                    <div class="icon_menu">
+                        <img src="~/Content/AdminAssets/img/menu-icon/2.svg" alt="">
+                    </div>
+                    <span>Books</span>
+                </a>
+                <ul>
+                    <li><a href="@Url.Action("Books","Admin")">Books</a></li>
+                    <li><a href="@Url.Action("Add_Books","Admin")">Add Books</a></li>
+
+                 
+
+                </ul>
+            </li>
+
+            <li class="">
+                <a class="has-arrow" href="#" aria-expanded="false">
+                    <div class="icon_menu">
+                        <img src="~/Content/AdminAssets/img/menu-icon/2.svg" alt="">
+                    </div>
+                    <span>Accounts</span>
+                </a>
+                <ul>
+                    <li><a href="@Url.Action("Account_Detail","Admin")">Account Details</a></li>
+                    <li><a href="@Url.Action("Add_Account","Admin")">Add Account</a></li>
+
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+    <!--/ sidebar  -->
+    <!-- menu  -->
+    <div class="container-fluid no-gutters">
+        <div class="row">
+            <div class="col-lg-12 p-0 ">
+                <div class="header_iner d-flex justify-content-between align-items-center">
+                    <div class="sidebar_icon d-lg-none">
+                        <i class="ti-menu"></i>
+                    </div>
+                    <div class="profile_info" style="order: 5;">
+                        <img src="~/Content/userimg/@Session["userImg"].ToString()" style="width: 64px; height: 64px; border-radius: 31px;" alt="#">
+                        <div class="profile_info_iner">
+                            <div class="profile_author_name">
+                                <p>@Session["uname"].ToString() </p>
+
+                            </div>
+                            <div class="profile_info_details">
+                                <a style="color: whitesmoke; font-weight:lighter; font-size: 17px;text-decoration: none; " href="@Url.Action("Edit","Admin",new {id= @Session["userId"] }) ">Edit Profile </a>
+                                <a style="color: whitesmoke; font-weight:lighter; font-size: 17px;text-decoration: none; " href="@Url.Action("Logout","Account")">Log Out </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div style="margin-left:70vw;" class="header_right d-flex justify-content-between align-items-center">
+                        @*<a class="btn btn-primary" href="@Url.Action("Logout","Home")">Log Out </a>*@
+                        @*<div class="profile_info">
+            <p>Welcome @ViewBag.Id </p>
+            <div class="profile_info_iner">
+
+                <div class="profile_info_details">
+                    <a href="@Url.Action("Profile_Settings","Admin")"> Profile Settings </a>
+
+                    <a href="@Url.Action("Logout","Home")">Log Out </a>
+                </div>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!--/ menu  -->
+
+    @RenderBody()
+    <!-- footer  -->
+    <script src="~/Content/AdminAssets/js/jquery-3.4.1.min.js"></script>
+    <!-- popper js -->
+    <script src="~/Content/AdminAssets/js/popper.min.js"></script>
+    <!-- bootstarp js -->
+    <script src="~/Content/AdminAssets/js/bootstrap.min.js"></script>
+    <!-- sidebar menu  -->
+    <script src="~/Content/AdminAssets/js/metisMenu.js"></script>
+    <!-- waypoints js -->
+    <script src="~/Content/AdminAssets/vendors/count_up/jquery.waypoints.min.js"></script>
+    <!-- waypoints js -->
+    <script src="~/Content/AdminAssets/vendors/chartlist/Chart.min.js"></script>
+    <!-- counterup js -->
+    <script src="~/Content/AdminAssets/vendors/count_up/jquery.counterup.min.js"></script>
+    <!-- nice select -->
+    <script src="~/Content/AdminAssets/vendors/niceselect/js/jquery.nice-select.min.js"></script>
+    <!-- owl carousel -->
+    <script src="~/Content/AdminAssets/vendors/owl_carousel/js/owl.carousel.min.js"></script>
+    <!-- responsive table -->
+    <script src="~/Content/AdminAssets/vendors/datatable/js/jquery.dataTables.min.js"></script>
+    <script src="~/Content/AdminAssets/vendors/datatable/js/dataTables.responsive.min.js"></script>
+    <script src="~/Content/AdminAssets/vendors/datatable/js/dataTables.buttons.min.js"></script>
+    <script src="~/Content/AdminAssets/vendors/datatable/js/buttons.flash.min.js"></script>
+    <script src="~/Content/AdminAssets/vendors/datatable/js/jszip.min.js"></script>
+    <script src="~/Content/AdminAssets/vendors/datatable/js/pdfmake.min.js"></script>
+    <script src="~/Content/AdminAssets/vendors/datatable/js/vfs_fonts.js"></script>
+    <script src="~/Content/AdminAssets/vendors/datatable/js/buttons.html5.min.js"></script>
+    <script src="~/Content/AdminAssets/vendors/datatable/js/buttons.print.min.js"></script>
+    <!-- datepicker  -->
+    <script src="~/Content/AdminAssets/vendors/datepicker/datepicker.js"></script>
+    <script src="~/Content/AdminAssets/vendors/datepicker/datepicker.en.js"></script>
+    <script src="~/Content/AdminAssets/vendors/datepicker/datepicker.custom.js"></script>
+    <script src="~/Content/AdminAssets/js/chart.min.js"></script>
+    <script src="~/Content/AdminAssets/vendors/chartjs/roundedBar.min.js"></script>
+    <!-- progressbar js -->
+    <script src="~/Content/AdminAssets/vendors/progressbar/jquery.barfiller.js"></script>
+    <!-- tag input -->
+    <script src="~/Content/AdminAssets/vendors/tagsinput/tagsinput.js"></script>
+    <!-- text editor js -->
+    <script src="~/Content/AdminAssets/vendors/text_editor/summernote-bs4.js"></script>
+    <script src="~/Content/AdminAssets/vendors/am_chart/amcharts.js"></script>
+    <!-- scrollabe  -->
+    <script src="~/Content/AdminAssets/vendors/scroll/perfect-scrollbar.min.js"></script>
+    <script src="~/Content/AdminAssets/vendors/scroll/scrollable-custom.js"></script>
+    <!-- vector map  -->
+    <script src="~/Content/AdminAssets/vendors/vectormap-home/vectormap-2.0.2.min.js"></script>
+    <script src="~/Content/AdminAssets/vendors/vectormap-home/vectormap-world-mill-en.js"></script>
+    <!-- apex chrat  -->
+    <script src="~/Content/AdminAssets/vendors/apex_chart/apex-chart2.js"></script>
+    <script src="~/Content/AdminAssets/vendors/apex_chart/apex_dashboard.js"></script>
+    <script src="~/Content/AdminAssets/vendors/echart/echarts.min.js"></script>
+
+    <script src="~/Content/AdminAssets/vendors/chart_am/core.js"></script>
+    <script src="~/Content/AdminAssets/vendors/chart_am/charts.js"></script>
+    <script src="~/Content/AdminAssets/vendors/chart_am/animated.js"></script>
+    <script src="~/Content/AdminAssets/vendors/chart_am/kelly.js"></script>
+    <script src="~/Content/AdminAssets/vendors/chart_am/chart-custom.js"></script>
+    <!-- custom js -->
+    <script src="~/Content/AdminAssets/js/dashboard_init.js"></script>
+    <script src="~/Content/AdminAssets/js/custom.js"></script>
+</body>
+<!-- Mirrored from demo.dashboardpack.com/sales-html/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 Jan 2022 08:32:15 GMT -->
+</html>

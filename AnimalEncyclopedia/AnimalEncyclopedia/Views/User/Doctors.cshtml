@@ -1,0 +1,31 @@
+﻿@model IEnumerable<AnimalEncyclopedia.Models.Doct>
+@{
+    ViewBag.Title = "Doctors";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <title>Doctors</title>
+    <link rel="stylesheet" href="~/Content/UserCss/Doctor.css">
+</head>
+<div class="bodies">
+    <div class="cons">
+        @foreach (var item in Model)
+        {
+
+            <div class="boss">
+                <div class="imgBx">
+                    <img src="~/Content/DocImg/@item.images">
+                </div>
+                <div class="content">
+                    <h2>@item.Title</h2>
+                    <p>
+                   @item.About
+                    </p>
+                    @*<a href="#">Read More</a>*@
+                </div>
+            </div>
+        }
+       
+    </div>
+</div>

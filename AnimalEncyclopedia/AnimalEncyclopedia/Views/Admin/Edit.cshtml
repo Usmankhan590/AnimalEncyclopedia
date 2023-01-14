@@ -1,0 +1,107 @@
+﻿@model AnimalEncyclopedia.Models.Table
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<head>
+    <title>Edit Profile</title>
+</head>
+
+
+<section class="main_content dashboard_part large_header_bg">
+
+    <div class="main_content_iner ">
+        <div class="container-fluid p-0">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="dashboard_header mb_50">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="dashboard_header_title">
+                                    @*<h3> Default Dashboard</h3>*@
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="dashboard_breadcam text-right">
+                                    @*         <p><a href="index-2.html">Dashboard</a> <i class="fas fa-caret-right"></i> Resister</p>*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="white_box mb_30">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6">
+                                <!-- sign_in  -->
+                                <div class="modal-content cs_modal">
+                                    <div class="modal-header theme_bg_1 justify-content-center">
+                                        <h5 class="modal-title text_white">Edit Profile</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        @using (Html.BeginForm("Edit", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                                        {
+                                        <form>
+
+
+                                            <p class="text-info"> First Name</p>
+                                            <div class="form-group">
+                                                @Html.TextBoxFor(a => a.FirstName, null, new { @class = "form-control", minlength = "3" })
+                                            </div>
+
+                                            <p class="text-info"> Last Name</p>
+                                            <div class="form-group ">
+                                                @Html.TextBoxFor(a => a.LastName, null, new { @class = "form-control", minlength = "3" })
+                                            </div>
+
+                                            <p class="text-info"> Email</p>
+                                            <div class="form-group ">
+                                                @Html.TextBoxFor(a => a.Email, null, new { @class = "form-control", Type = "Email" })
+                                            </div>
+
+                                            <p class="text-info"> Password</p>
+                                            <div class="form-group ">
+                                                @Html.TextBoxFor(a => a.Password, null, new { @class = "form-control", Type = "password" })
+                                            </div>
+
+                                            <!--<p class="text-info"> Role Id</p>
+                                            <div class="form-group ">
+                                                <select name="RoleId" id="RoleId" class="form-control">
+                                                    <option>Select</option>
+                                                    <option value="1">Admin</option>
+                                                    <option value="2">User</option>
+                                                </select>-->
+                                                @* @Html.TextBoxFor(a => a.RoleId, null, new { @class = "form-control" })*@
+                                            <!--</div>-->
+                                            <center class="text-info">Image</center><br />
+
+                                            <div class="form-group ">
+
+                                              
+                                                <input type="file" name="img" required="" />
+                                            </div>
+
+
+
+
+                                            <input type="submit" value="Add" class="btn_1 full_width text-center" />
+
+
+                                        </form>
+                                        }
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

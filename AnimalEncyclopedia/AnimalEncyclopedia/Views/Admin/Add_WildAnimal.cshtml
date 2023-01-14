@@ -1,0 +1,75 @@
+﻿@model AnimalEncyclopedia.Models.Animal
+@{
+    ViewBag.Title = "Add_WildAnimal";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<section class="main_content dashboard_part large_header_bg">
+
+    <div class="main_content_iner ">
+        <div class="container-fluid p-0">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="dashboard_header mb_50">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="dashboard_header_title">
+                                    @*  <h3> Default Dashboard</h3>*@
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="dashboard_breadcam text-right">
+                                    <p><a href="index-2.html">Animals</a> <i class="fas fa-caret-right"></i> Add_Wild Animals</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="white_box mb_30">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6">
+                                <!-- sign_in  -->
+                                <div class="modal-content cs_modal">
+                                    <div class="modal-header theme_bg_1 justify-content-center">
+                                        <h5 class="modal-title text_white">Add Wild Animal</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        @using (Html.BeginForm("Add_WildAnimal", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                                        {
+                                            <form>
+                                                <div class="form-group">
+                                                    <center>Title</center><br />
+                                                    @Html.TextBoxFor(a => a.Title, null, new { @class = "form-control", placeholder = "Enter Title", required = "" })
+                                                </div>
+
+                                                <div class="form-group ">
+                                                    <center>Description</center><br />
+                                                    @Html.TextBoxFor(a => a.Description, null, new { @class = "form-control", placeholder = "Enter Description", required = "" })
+                                                </div>
+
+                                                <div class="form-group ">
+                                                    <center>Images</center><br />
+                                                    <input type="file" name="img" required="" />
+                                                </div>
+                                                <input type="submit" value="Add" class="btn_1 full_width text-center" />
+
+
+                                            </form>
+                                        }
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+

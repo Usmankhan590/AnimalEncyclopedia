@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f44ef173ff984610a3dcabfc64522fd7" Name="Diagram1">
+        <EntityTypeShape EntityType="Database1Model.Table" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.UserRole" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="Database1Model.FK__Table__RoleId__38996AB5" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Database1Model.card" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Database1Model.research" Width="1.5" PointX="3.375" PointY="4.75" />
+        <EntityTypeShape EntityType="Database1Model.Doct" Width="1.5" PointX="3.5" PointY="7.625" />
+        <EntityTypeShape EntityType="Database1Model.Amphibian" Width="1.5" PointX="7.25" PointY="4.625" />
+        <EntityTypeShape EntityType="Database1Model.Animal" Width="1.5" PointX="0.625" PointY="7.625" />
+        <EntityTypeShape EntityType="Database1Model.Bird" Width="1.5" PointX="7.5" PointY="7.75" />
+        <EntityTypeShape EntityType="Database1Model.Book" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="Database1Model.Review" Width="1.5" PointX="7.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

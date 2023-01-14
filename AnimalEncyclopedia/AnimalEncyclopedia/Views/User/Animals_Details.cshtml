@@ -1,0 +1,121 @@
+﻿@model AnimalEncyclopedia.Models.AnimalsModel
+@{
+    ViewBag.Title = "Animals_Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <title>Animals Details</title>
+    <link rel="stylesheet" href="~/Content/UserCss/remai-ANIMALS.css">
+    <link rel="stylesheet" href="~/Content/UserCss/FLIPHOVERR.css">
+   >
+</head>
+
+
+<div class="whoole">
+    <div class="container">
+        <p style="color:rgb(148, 47, 11) ; text-align: center; font-size: 3rem; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">
+            ANIMALS_GALLERY
+        </p>
+    </div>
+    <br>
+    <br>
+
+    <div class="container">
+        <blockquote style="text-align: center; line-height: 4vh; font-size: x-large; color:rgb(184 49 0); font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; letter-spacing: 0.2rem">
+            "Amphibians are small vertebrates that need water, or a moist environment, to survive."
+        </blockquote>
+    </div>
+    <!-- FOR IMAGES -->
+    <div class="container">
+
+        <div class="row">
+            @foreach (var item in Model.Amphibians)
+            {
+                <div id="col" class="col-lg-4 col-md-4 col-sm-12">
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="~/Content/AmpImg/@item.images" alt="" style="width:100%;height:100%;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 2rem;font-weight: 200;">
+                                    @item.Title
+                                </h4>
+                                <br><br>
+                                <p style="font-size: 1.5rem; font-family: 'Times New Roman', Times, serif; font-weight: 500; line-height: 3.5vh;">
+                                    @item.Description
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            }
+                <br>
+
+            </div>
+        <br>
+        <br>
+        <div class="container">
+            <blockquote style="text-align: center; line-height: 4vh; font-size: x-large; color:rgb(184 49 0); font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; letter-spacing: 0.2rem">
+                “Until one has loved an animal, a part of one's soul remains unawakened.”
+            </blockquote>
+        </div>
+        <br>
+        <div class="miner">
+            <section class="meaner">
+
+                @foreach (var item in Model.Animals)
+                {
+                    <div class="card9">
+                        <div class="BOX">
+                            <div class="IMGBX">
+                                <img class="rovo" src="~/Content/AddAnimal/@item.images" alt="">
+                            </div>
+                            <div class="recontentBX">
+                                <div class="viewing">
+                                    <h2 style="font-size: 1.5rem; font-weight: 900;" class="viewer">@item.Title</h2>
+                                    <p style="font-size: 1rem; font-weight: 700; color: rgb(63, 49, 49);" class="viewer1">
+                                      @item.Description
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </section>
+        </div>
+        <br>
+        <br>
+
+        <div class="container">
+            <blockquote style="text-align: center; line-height: 4vh; font-size: x-large; color: rgb(184 49 0); font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; letter-spacing: 0.2rem">
+                “The greatness of a nation and its moral progress can be judged by the way its animals are treated.”
+            </blockquote>
+        </div>
+
+        <div class="impor">
+            @foreach (var item in Model.Birds)
+            {
+                <div class="card7">
+                    <img class="revise" src="~/Content/BirdImg/@item.images" alt="">
+                    <div class="CONTENTSS">
+                        <span class="lane"></span>
+                        <span class="lane"></span>
+                        <span class="lane"></span>
+                        <span class="lane"></span>
+                        <h1 class="mago">@item.Title</h1>
+                        <p class="mago1">
+                           @item.Description
+                        </p>
+                    </div>
+                </div>
+            }
+
+
+        </div>
+</div>

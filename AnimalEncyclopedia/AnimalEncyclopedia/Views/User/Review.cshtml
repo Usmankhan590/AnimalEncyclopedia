@@ -1,0 +1,87 @@
+﻿@model AnimalEncyclopedia.Models.Review
+@{
+    ViewBag.Title = "Review";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+
+
+<head>
+    <title>Reviews</title>
+    <link rel="stylesheet" href="~/Content/UserCss/feedback.css" />
+</head>
+@*<div class="container" style="align-content:center">
+        <div class="row">
+            <h1>Feedback</h1>
+        </div>
+        <div class="row">
+            <h4 style="text-align:center">We'd love to hear from you!</h4>
+        </div>
+        <div class="row input-container">
+            <div class="col-md-8 " style="text-align:center">
+                <div class="styled-input wide">
+                    <input type="text" required />
+
+                    @Html.TextBoxFor(a => a.Name, null, new { required = "" })
+                    <label>Name</label>
+                </div>
+            </div>
+
+            <div class="align-content-lg-center ">
+                <div class="styled-input wide">
+
+                    @Html.TextBoxFor(a => a.Reviews, null, new { required = "", row = "10" })
+                    @Html.TextAreaFor(a => a.Reviews, new {@class= "textarea" ,required = "", row = "3" })
+                    <label>Message</label>
+                </div>
+            </div>
+            <div class="col-md-8 styled-input wide">
+                <input type="submit" value="Add" class="btn btn-danger" />
+            </div>
+        </div>
+    </div>*@
+
+<div class="container">
+    <div class="row">
+        <h3 style="text-align:center">We'd love to hear from you!</h3>
+    </div>
+    <div class="row sizes">
+        @using (Html.BeginForm("Review", "User", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div>
+                <center>
+                    @Html.TextBoxFor(a => a.Name, null, new { required = "", placeholder = "Name", minlength = "3" })
+
+                    <br />
+                </center>
+            </div>
+
+            <br />
+            <div style=" margin-top:20px">
+                <center>
+                    @Html.TextAreaFor(a => a.Reviews, new { @class = "textarea", required = "", row = "3", placeholder = "Your Review", minlength = "10" })
+
+                </center>
+            </div>
+
+            <div style=" margin-top:20px">
+                <center>
+                    <input type="file" name="img" required="" />
+                </center>
+            </div>
+
+            <div style=" margin-top:20px">
+                <center>
+                    <input type="submit" value="Add" class="btn btn-danger" />
+
+                </center>
+
+            </div>
+        }
+    </div>
+
+</div>

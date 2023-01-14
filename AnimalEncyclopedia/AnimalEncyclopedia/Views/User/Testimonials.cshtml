@@ -1,0 +1,55 @@
+﻿@model IEnumerable<AnimalEncyclopedia.Models.Review>
+@{
+    ViewBag.Title = "Testimonials";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+
+
+
+<head>
+    <title>Testimonials</title>
+
+    <link rel="stylesheet" href="~/Content/UserCss/swiper-bundle.css" />
+
+    <link href="~/Content/UserCss/style.css" rel="stylesheet">
+
+    <title>Reviews</title>
+</head>
+
+<section class="contai">
+    <div class="testimonial mySwiper">
+        <div class="testi-content swiper-wrapper">
+            @foreach (var item in Model)
+            {
+                <div class="slide swiper-slide">
+                    <img src="~/Content/reviews/@item.img" alt="" class="image" />
+                    <p class="par">
+                        @item.Reviews
+                    </p>
+
+                    <i class="bx bxs-quote-alt-left quote-icon"></i>
+
+                    <div class="details">
+                        <span class="name">@item.Name</span>
+
+                    </div>
+                </div>
+            }
+
+        </div>
+        <div class="swiper-button-next nav-btn"></div>
+        <div class="swiper-button-prev nav-btn"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<!-- Swiper JS -->
+<script src="~/Content/UserCss/JS/swiper-bundle.min.js"></script>
+
+<!-- JavaScript -->
+<script src="~/Content/UserCss/JS/main.js"></script>

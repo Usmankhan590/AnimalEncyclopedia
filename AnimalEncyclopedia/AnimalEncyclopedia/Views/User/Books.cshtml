@@ -1,0 +1,52 @@
+﻿@model IEnumerable<AnimalEncyclopedia.Models.Book>
+@{
+    ViewBag.Title = "Books";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <title>Books</title>
+    <link rel="stylesheet" href="~/Content/UserCss/Books.css">
+</head>
+
+<div class="hero-container">
+    @foreach (var item in Model)
+    {
+        <div class="main-container">
+            <div class="poster-container">
+                <a href="#"><img src="~/Content/BokImg/@item.img" class="poster" /></a>
+            </div>
+            <div class="ticket-container">
+                <div class="ticket__content">
+                    <h4 class="ticket__movie-title">@item.Title</h4>
+                    <p class="ticket__movie-slogan">
+                        @item.Description
+                    </p>
+                    @*<a class="ticket__buy-btn" href="~/Content/BokImg/@item.download" download=""> Download</a>*@
+
+
+
+                    
+
+                    @{
+                        if (Session["userId"] != null)
+                        {
+                            <button class="ticket__buy-btn" name="down"><a style="text-decoration:none" class="ticket__buy-btn" href="~/Content/BokImg/@item.download" download="">Download now</a> </button>
+
+
+                        }
+
+                        else
+                        {
+                            <button class="ticket__buy-btn" name="down"><a style="text-decoration:none" class="ticket__buy-btn" href="@Url.Action("Login","Account")" >To Download Login First</a> </button>
+
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+
+    }
+
+</div>
+
+

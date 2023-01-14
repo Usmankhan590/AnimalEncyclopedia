@@ -1,0 +1,108 @@
+﻿@model AnimalEncyclopedia.Models.Table
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<head>
+    <title>Login/SignUp</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/Logincss/style.css" />
+  
+</head>
+<div class="my">
+
+    <div class="section1">
+        <div class="container">
+            <div class="row full-height justify-content-center">
+                <div class="col-12 text-center align-self-center py-5">
+                    <div class="section1 pb-5 pt-5 pt-sm-2 text-center">
+                        <h6 class="hh6 mb-0 pb-3">
+                            <span class="sspan">Log In </span>
+                            <span  class="sspan">Sign Up</span>
+                        </h6>
+                        <input class="checkbox" type="checkbox" id="reg-log" name="reg-log" />
+                        <label for="reg-log"></label>
+
+                        <div class="card-3d-wrap mx-auto">
+                            <div class="card-3d-wrapper">
+                                <div class="card-front">
+                                    <div class="center-wrap">
+                                        <div class="section1 text-center">
+                                            <h4 class="mb-4 pb-3 hh4">Log In</h4>
+
+
+                                            @{ Html.BeginForm("Login", "Account");}
+
+                                            <div class="form-group">
+                                                @*<input type="text" name="Uname" class="form-style" placeholder="Username" id="logemail" autocomplete="off" required="">*@
+                                                @Html.TextBoxFor(a => a.Email, null, new { @class = "form-style", placeholder = "Enter Email", required = "" , Type= "Email" })
+                                                <i class="input-icon uil uil-at" ></i>
+                                            </div>
+                                            <div class="form-group mt-2">
+                                                @*<input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off" required="">*@
+                                                @Html.TextBoxFor(a => a.Password, null, new { @class = "form-style", placeholder = "Enter Password", required = "", minlength = "8", Type = "password" })
+                                                <i class="input-icon uil uil-lock-alt" ></i>
+                                            </div>
+                                            <button class="btn mt-4">Log In</button>
+
+                                            @{ Html.EndForm();}
+                                            @*<p class="mb-0 mt-4 text-center">
+                                                    <a href="#0" class="link">Forgot your password?</a>
+                                                </p>*@
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-back">
+                                    <div class="center-wrap">
+                                        <div class="section1 text-center">
+                                            <h4 class="mb-4 pb-3 hh4">Sign Up</h4>
+                                            @{ Html.BeginForm("Signup", "Account", FormMethod.Post, new { enctype = "multipart/form-data" });}
+                                            <div style="margin-bottom: 10px;" class="form-group">
+                                                @Html.TextBoxFor(a => a.FirstName, null, new { @class = "form-style", placeholder = "Enter First Name", minlength = "3", required = "" })
+                                                <i class="input-icon uil uil-user"  ></i>
+                                            </div>
+                                            <div style="margin-bottom: 10px;" class="form-group">
+                                                @Html.TextBoxFor(a => a.LastName, null, new { @class = "form-style", placeholder = "Enter Last Name" , minlength = "3", required = "" })
+                                                <i class="input-icon uil uil-user"  ></i>
+                                            </div>
+                                            <div style="margin-bottom: 10px;" class="form-group">
+                                                @Html.TextBoxFor(a => a.Email, null, new { @class = "form-style", placeholder = "Enter Email" ,required = "",Type = "Email" })
+                                                <i class="input-icon uil uil-at"  ></i>
+                                            </div>
+
+                                            <div style="margin-bottom: 10px;" class="form-group">
+                                             
+                                                <i class="input-icon uil uil-lock-alt"  ></i>
+                                                @Html.TextBoxFor(a => a.Password, null, new { @class = "form-style", placeholder = "Enter Password", Type = "password", minlength="8", required = "" })
+                                            </div>
+
+                                            <div style="margin-bottom: 10px;" class="form-group">
+
+                                                <i class="fa fa-camera"  ></i>
+                                                <input type="file" name="img"  required =""/>
+                                            </div>
+
+
+                                            <p class="text-danger">@ViewBag.error</p>
+                                            <button type="submit" class="btn mt-4">Sign up</button>
+                                            @{ Html.EndForm();}
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

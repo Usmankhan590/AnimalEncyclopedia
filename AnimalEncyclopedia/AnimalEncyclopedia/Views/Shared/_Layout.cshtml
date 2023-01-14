@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+    <link rel="icon" href="~/Content/images/faviconicon.png" type="image/icon">
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="~/Content/UserCss/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <!-- JS -->
+    <script src="~/Content/UserCss/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+    <script src="~/Content/UserCss/js/jquery-3.6.0.min.js"></script>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--FONT FAMILY -->
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+    <!-- STYLES -->
+    <link rel="stylesheet" href="~/Content/UserCss/CENTRALzoo.css">
+    <link rel="stylesheet" href="~/Content/UserCss/zoo.css">
+    <link rel="stylesheet" href="~/Content/UserCss/glassmorphism.css">
+    <link rel="stylesheet" href="~/Content/UserCss/fade.css">
+    <link rel="stylesheet" href="~/Content/UserCss/contact us.css">
+    <link rel="stylesheet" href="~/Content/UserCss/scroll.css">
+
+
+
+
+</head>
+<body>
+    <div class="header-background">
+        <div id="nav" class="sticky-nav">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="@Url.Action("Index","User")"><img src="~/Content/images/logo3.png" alt=""></a>
+                    <div class="profile_info" style="order: 5;">
+
+                        @{
+                            if (Session["uname"] != null)
+                            {
+                                <img src="~/Content/userimg/@Session["userImg"].ToString()" style="width: 64px; height: 64px; border-radius: 31px;" alt="#">
+                                <div class="profile_info_iner">
+                                    <div class="profile_author_name">
+                                        <p>@Session["uname"].ToString() </p>
+
+                                    </div>
+                                    <div class="profile_info_details">
+                                        <a style="color: whitesmoke; font-weight:lighter; font-size: 17px;text-decoration: none; " href="@Url.Action("EditUser","User",new {id= @Session["userId"] })">Edit Profile </a>
+                                        <a style="color: whitesmoke; font-weight:lighter; font-size: 17px;text-decoration: none; " href="@Url.Action("Logout","Account")">Log Out </a>
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+
+                                <div class="nav-item">
+                                    <a style="font-size: 1.5rem; ; order: 7;  cursor: pointer;  margin-left: 10px;" class="nav-link" href="@Url.Action("Login","Account")"><i style="margin-left:13px ;" class="fa fa-user-circle-o" aria-hidden="true"></i>Login</a>
+                                </div>
+                            }
+                        }
+
+
+
+                    </div>
+
+                      
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+
+                            <li class="nav-item">
+                                <a style="font-size: 1.5rem; letter-spacing: 1;" class="nav-link" href="@Url.Action("Animals","User")">Animals</a>
+                            </li>
+                            <li class="nav-item">
+                                <a style="font-size: 1.5rem; letter-spacing: 1;" class="nav-link" href="@Url.Action("Doctors","User")">Doctors</a>
+                            </li>
+                            <li class="nav-item">
+                                <a style="font-size: 1.5rem; letter-spacing: 1;" class="nav-link" href="@Url.Action("Testimonials","User")">Testimonials</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a style="font-size: 1.5rem; letter-spacing: 1;" class="nav-link" href="@Url.Action("Books","User")">Books</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a style="font-size: 1.5rem; letter-spacing: 1;" class="nav-link" href="@Url.Action("Review","User")">Reviews</a>
+                            </li>
+
+
+
+                        </ul>
+
+                    </div>
+                </div>
+                
+                        
+                      
+
+            </nav>
+        </div>
+
+
+    </div>
+    @RenderBody()
+    
+    <script type="text/javascript">
+    window.addEventListener('scroll', reveal);
+  
+  
+    function reveal(){
+      
+      var reveals = document.querySelectorAll('.reveal');
+      
+  
+      for(var i=0; i <reveals.length; i++){
+  
+  
+        var windowheight = window.innerHeight;
+       var revealtop = reveals[i].getBoundingClientRect().top;
+       var revealpoint =150;
+  
+       if(revealtop < windowheight - revealpoint){
+         reveals[i].classList.add('active');
+  
+       }
+       else{
+          reveals[i].classList.remove('active');
+       }
+      }
+    }
+    </script>
+   
+
+
+
+    <!-- for footer -->
+
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container text-center text-md-left">
+            <div class="row text-center text-md-left">
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">ABOUT-US </h5>
+                    <p style="font-family: 'Klee One', cursive; line-height: 30px;">Featuring 2,500 species and packed with stunning colour photographs, amazing animal facts, maps, and more, the new National Geographic Kids Animal Encyclopaedia is the most comprehensive on the market today, amazing and entertaining readers, while providing them with authoritative information about the animal kingdom.</p>
+
+                </div>
+
+
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
+                        Contact
+                    </h5>
+
+                    <p style="font-family: 'Klee One', cursive;">
+                        <i class="fa fa-envelope mr-3"> AnimalEncyclo@gmail.com</i>
+                    </p>
+                    <p style="font-family: 'Klee One', cursive;">
+                        <i class="fa fa-phone mr-3"> +92 3172135853</i>
+                    </p>
+                    <p style="font-family: 'Klee One', cursive;">
+                        <i class="fa fa-print mr-3"> +01 335 633 77</i>
+                    </p>
+
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">
+                        Social Links
+                    </h5>
+                    <!-- <iframe style="border-radius: 20px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.668676322974!2d67.0769667146192!3d24.841001802155784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33c117f972ca3%3A0xae5e1914da1f49da!2sPhase%203%20Defence%20View%20Housing%20Society%2C%20Karachi%2C%20Karachi%20City%2C%20Sindh!5e0!3m2!1sen!2s!4v1629772344529!5m2!1sen!2s" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+                    <div class="centerdiv">
+                        <a class="footer1" href="https://www.facebook.com/" target="_blank">
+                            <i class="fa fa-1x fa-facebook"></i>
+                        </a>
+                        <br>
+                        <a class="footer1" href="https://twitter.com/login" target="_blank">
+                            <i class="fa fa-1x fa-twitter"></i>
+                        </a>
+                        <br>
+                        <a class="footer1" href="https://www.instagram.com/" target="_blank">
+                            <i class="fa fa-1x fa-instagram"></i>
+                        </a>
+                        <br>
+                        <a class="footer1" href="https://www.youtube.com/" target="_blank">
+                            <i class="fa fa-1x fa-youtube"></i>
+                        </a><br>
+                        <a class="footer1" href="https://www.linkedin.com/login" target="_blank">
+                            <i class="fa fa-1x fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+
+            <!-- <br class="mb-4"> -->
+            <div class="row">
+
+                <p style="text-align: center; font-family: 'Klee One', cursive;">
+                    &copy; Copyright 1980 All rights are Reserved
+                    <a href="@Url.Action("Index","User")" style="text-decoration: none;">
+                        <br>
+                        <strong style="color: goldenrod;"><br> Animal Encyclopedia</strong>
+                    </a>
+                </p>
+
+
+
+
+            </div>
+
+        </div>
+
+    </footer>
+    <button id="topBtn"><i class="fa fa-arrow-up"></i></button>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 40) {
+                    $('#topBtn').fadeIn();
+                }
+                else {
+                    $('#topBtn').fadeOut();
+                }
+            });
+
+            $('#topBtn').click(function () {
+                $('html ,body').animate({ scrollTop: 0 }, 800);
+            });
+        })
+    </script>
+</body>
+</html>

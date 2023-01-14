@@ -1,0 +1,230 @@
+﻿@model AnimalEncyclopedia.Models.ViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <title>Home</title>
+</head>
+<title>Home</title>
+
+<!-- WARNING -->
+<div class="container-fluid">
+    <div class="row">
+        <p class="form-control">The world's largest & most trusted collection of animal facts!</p>
+    </div>
+</div>
+<br>
+
+<div class="container">
+    <blockquote style="text-align: center; font-size: x-large; color: rgb(126, 25, 25); font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; letter-spacing: 0.4rem">"Sympathy IS Another Kind OF Peace."</blockquote>
+</div>
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="image">
+            <div class="Zoom-In">
+                <figure>
+                    <img src="~/Content/images/bg-image4.jpg" alt="">
+
+                </figure>
+
+            </div>
+
+        </div>
+
+        <div class="image">
+            <div class="Zoom-In">
+                <figure>
+                    <img src="~/Content/images/bear.jpg" alt="">
+
+                </figure>
+            </div>
+
+        </div>
+
+
+        <div class="image">
+            <div class="Zoom-In">
+                <figure>
+                    <img src="~/Content/images/Elephant.jpg" alt="">
+
+                </figure>
+
+
+            </div>
+
+        </div>
+
+
+
+        <div class="image">
+            <div class="Zoom-In">
+                <figure>
+                    <img src="~/Content/images/chover1.jpg" alt="">
+
+                </figure>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+
+<div class="container">
+    <blockquote style="text-align: center; font-size: x-large; color:darkred;  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; letter-spacing: 0.4rem">"The City Is Not A Concrete Jungle, It As A Human Zoo."</blockquote>
+</div>
+@*<br>*@
+<!-- GLASS MORPHISM -->
+
+<section>
+    <div class="sepa">
+        <div style="position: relative; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; margin: 40px 0;"
+             class="container">
+            @foreach (var item in Model.Cards)
+            {
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="~/Content/Addimg/@item.images" alt="">
+                    </div>
+
+                    <div class="content">
+                        <div class="contentBx">
+                            <h2 class="morphism">
+                                @item.Title<br>
+                                <span class="morphism1">@item.Description</span>
+                            </h2>
+                        </div>
+                        <!-- <ul class="sci">
+                          <li class="morpho" style="--i:1;"><a class="glass" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                          <li class="morpho" style="--i:2;"><a class="glass" href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                            <li class="morpho" style="--i:3;"><a class="glass" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li class="morpho" style="--i:4;"><a class="glass" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li class="morpho" style="--i:5;"><a class="glass" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+
+                        </ul> -->
+                    </div>
+                </div>
+            }
+            @*<div class="card">
+                    <div class="imgBx">
+                        <img src="~/Content/images/glass1.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="contentBx">
+                            <h2 class="morphism">THE OLD LION KING <br><span class="morphism1">LEARN to fIght aLoNE</span></h2>
+                        </div>
+                        <ul class="sci">
+                            <li class="morpho" style="--i:1;"><a class="glass" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li class="morpho" style="--i:2;"><a class="glass" href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                            <li class="morpho" style="--i:3;"><a class="glass" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li class="morpho" style="--i:4;"><a class="glass" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li class="morpho" style="--i:5;"><a class="glass" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="~/Content/images/glass2.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="contentBx">
+                            <h2 class="morphism">
+                                A RUSTY MONITOR<br>
+                                <span class="morphism1">Real Is Rare</span>
+                            </h2>
+                        </div>
+                        <ul class="sci">
+                            <li class="morpho" style="--i:1;"><a class="glass" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li class="morpho" style="--i:2;"><a class="glass" href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                            <li class="morpho" style="--i:3;"><a class="glass" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li class="morpho" style="--i:4;"><a class="glass" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li class="morpho" style="--i:5;"><a class="glass" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>*@
+
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript" src="~/Content/UserCss/JS/vanilla-tilt.js"></script>
+<script>
+    VanillaTilt.init(document.querySelectorAll(".card"), {
+        max: 25,
+        speed: 400,
+        glare: true,
+        "max-glare": 1,
+    });
+</script>
+
+<div class="container">
+    @* <blockquote style="text-align: center; font-size: x-large; color:darkred; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; letter-spacing: 0.4rem;">"Make Each Day Your Master_Piece."</blockquote>*@
+</div>
+<br>
+<div style="background-image: url(fad-bg.jpg); background-size: cover;">
+    <header class="main-header">
+        <h1 class="top">
+            POINT OF RESEARCH
+
+        </h1>
+        <p class="scro1">
+            "Animals Do Speak But Very Few People Know How To Listen"
+        </p>
+
+    </header>
+    <div style="max-width: 1100px; margin: auto; overflow: auto; padding: 0.2rem;" class="container reveal">
+
+
+        @foreach (var item in Model.Researches)
+        {
+            <section class="card1">
+                <img class="tilt" src="~/Content/Research/@item.images" alt="">
+                <div class="part">
+                    <h3 class="scro">@item.Title </h3>
+                    <p style="font-weight: bold; font-family: cursive; font-size: 1.2rem;" class="scro1">
+                        "@item.Description"
+
+                    </p>
+
+                </div>
+            </section>
+        }
+    </div>
+
+
+</div>
+
+
+<script type="text/javascript">
+    window.addEventListener('scroll', reveal);
+
+
+    function reveal() {
+
+        var reveals = document.querySelectorAll('.reveal');
+
+
+        for (var i = 0; i < reveals.length; i++) {
+
+
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+            var revealpoint = 150;
+
+            if (revealtop < windowheight - revealpoint) {
+                reveals[i].classList.add('active');
+
+            }
+            else {
+                reveals[i].classList.remove('active');
+            }
+        }
+    }
+</script>
+
+

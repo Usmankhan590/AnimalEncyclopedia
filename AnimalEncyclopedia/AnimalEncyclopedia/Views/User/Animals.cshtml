@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "Animals";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <title>Animals</title>
+    <link rel="stylesheet" href="~/Content/UserCss/ANIMALS.css">
+</head>
+
+<div class="container">
+    <p class="expo reveal">
+        ANIMALS!
+    </p>
+    <br>
+    <p class="expo1 reveal">
+        " The Encyclopedia of Animals is a lavishly illustrated, authoritative, and comprehensive exploration of the rich and intriguing world of animals.
+        "
+        <br><br> <button style="background-color:darkred; border-radius: 15px; " type="button" class="btn"><a style="font-family: 'Shadows Into Light Two', cursive;" class="butn" href="@Url.Action("Animals_Details","User")">VIEW OUR ANIMALS</a></button>
+    </p>
+    <br>
+
+
+
+</div>
+<script type="text/javascript">
+        window.addEventListener('scroll', reveal);
+        function reveal() {
+
+            var reveals = document.querySelectorAll('.reveal');
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150;
+                if (revealtop < windowheight - revealpoint) {
+                    reveals[i].classList.add('active');
+                }
+                else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+</script>
+<br>
+<div class="container">
+    <blockquote style="text-align: center; color: rgb(67, 78, 69); font-family: fantasy; font-size: 1.8rem; line-height: 5vh;">“An animal’s eyes have the power to speak a great language.” </blockquote>
+</div>
+<br>
+<div class="rotate">
+    <div class="box">
+        <span class="dimension" style="--i:1;"><img class="rotator" src="~/Content/images/rou1.jpg" alt=""></span>
+        <span class="dimension" style="--i:2;"><img class="rotator" src="~/Content/images/rou2.jpg" alt=""></span>
+        <span class="dimension" style="--i:3;"><img class="rotator" src="~/Content/images/rou3.jpg" alt=""></span>
+        <span class="dimension" style="--i:4;"><img class="rotator" src="~/Content/images/rou4.jpg" alt=""></span>
+        <span class="dimension" style="--i:5;"><img class="rotator" src="~/Content/images/rou5.jpg" alt=""></span>
+        <span class="dimension" style="--i:6;"><img class="rotator" src="~/Content/images/rou6.jpg" alt=""></span>
+        <span class="dimension" style="--i:7;"><img class="rotator" src="~/Content/images/hover5.jpg" alt=""></span>
+        <span class="dimension" style="--i:8;"><img class="rotator" src="~/Content/images/3d-rotate3.jpg" alt=""></span>
+    </div>
+</div>
+
+<br>
+
+<script type="text/javascript">
+        window.addEventListener('scroll', reveal);
+
+
+        function reveal() {
+
+            var reveals = document.querySelectorAll('.reveal');
+
+
+            for (var i = 0; i < reveals.length; i++) {
+
+
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150;
+
+                if (revealtop < windowheight - revealpoint) {
+                    reveals[i].classList.add('active');
+
+                }
+                else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+</script>
+

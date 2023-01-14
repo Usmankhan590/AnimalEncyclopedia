@@ -1,0 +1,168 @@
+﻿@model AnimalEncyclopedia.Models.Table
+
+@{
+    ViewBag.Title = "EditUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<h2>EditUser</h2>*@
+
+@*@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Table</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "form-style" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-style" } })
+                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Img, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Img, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Img, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RoleId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.RoleId, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.RoleId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save Changes" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>*@
+
+
+
+<head>
+    <title>Edit Profile</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/Logincss/style.css" />
+
+</head>
+<div class="my">
+
+    <div class="section1">
+        <div class="container">
+            <div class="row full-height justify-content-center">
+                <div class="col-12 text-center align-self-center py-5">
+                    <div class="section1 pb-5 pt-5 pt-sm-2 text-center">
+                        <h6 class="hh6 mb-0 pb-3">
+
+                        </h6>
+
+
+                        <div class="card-3d-wrap mx-auto">
+                            <div class="card-3d-wrapper">
+                                <div class="card-front">
+                                    <div class="center-wrap">
+                                        <div class="section1 text-center">
+                                            <h4 class="mb-4 pb-3 hh4">Edit Profile</h4>
+                                            @{ Html.BeginForm("EditUser", "User", FormMethod.Post, new { enctype = "multipart/form-data" });}
+                                            <div style="margin-bottom: 10px;" class="form-group">
+
+
+                                                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-style", placeholder = "Enter First Name", required = "", minlength = "3" } })
+                                                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                                                <i class="input-icon uil uil-user"></i>
+                                            </div>
+                                            <div style="margin-bottom: 10px;" class="form-group">
+                                                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-style", placeholder = "Enter Last Name", required = "", minlength = "3" } })
+                                                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                                                @*@Html.TextBoxFor(a => a.LastName, null, new { @class = "form-style", placeholder = "Enter Last Name", required = "" })*@
+                                                <i class="input-icon uil uil-user"></i>
+                                            </div>
+                                            <div style="margin-bottom: 10px;" class="form-group">
+                                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-style", placeholder = "Enter Email", required = "", Type = "Email" } })
+                                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                                @*@Html.TextBoxFor(a => a.Email, null, new { @class = "form-style", placeholder = "Enter Email", required = "", Type = "Email" })*@
+                                                <i class="input-icon uil uil-at"></i>
+                                            </div>
+
+                                            <div style="margin-bottom: 10px;" class="form-group">
+
+                                                <i class="input-icon uil uil-lock-alt"></i>
+                                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-style", placeholder = "Enter Password", Type = "password", required = "", minlength = "8" } })
+                                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                                @*@Html.TextBoxFor(a => a.Password, null, new { @class = "form-style", placeholder = "Enter Password", Type = "password", required = "" })*@
+                                            </div>
+
+                                            <!--<div style="margin-bottom: 10px;" class="form-group">-->
+                                            @*@Html.EditorFor(model => model.Img, new { htmlAttributes = new { @class = "form-style" , required = "" } })
+        @Html.ValidationMessageFor(model => model.Img, "", new { @class = "text-danger" })*@
+                                            <!--<input type="file" name="img" required="" />
+        <i class="fa fa-camera"></i>
+
+
+    </div>-->
+
+                                            <div style="margin-bottom: 10px;" class="form-group">
+
+                                                <i class="fa fa-camera"></i>
+
+                                                <input type="file" name="img" required="" />
+                                            </div>
+
+
+                                            <button type="submit" class="btn mt-4">Save Changes</button>
+                                            @{ Html.EndForm();}
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
